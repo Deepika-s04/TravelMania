@@ -13,7 +13,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup Pages
@@ -22,7 +22,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./
+          path: ./  # Ensure this is pointing to your static files (like index.html)
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
